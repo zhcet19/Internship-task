@@ -1,0 +1,42 @@
+
+<!-- I was trying to recreate the FAQ section of clay.global but without any use of Javascript. Any idea for delaying the closing? -->
+
+<section class="faq">
+	<h3>FAQ</h3>
+	<%for(var i=0; i< faq.length ;i++){%>
+	<details class="faq__question" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" open>
+		
+		<summary class="faq__toggle" itemprop="name" aria-expanded="true" aria-controls="faq_answer_1">
+			<%=faq[i].question%>
+		</summary>
+		
+		<div id="faq_answer_1" class="faq__answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+			<span class="reveal_overlay"></span>
+			
+			<p itemscope="text">				
+				<%=faq[i].answer%>
+			</p>
+		</div>
+	</details>
+	
+	
+	
+	<% } %>
+</section>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/60adfb2fa4114e480ad0f52f/1f6jpqd63';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+
